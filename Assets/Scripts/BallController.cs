@@ -8,7 +8,6 @@ public class BallController : MonoBehaviour
     public TMP_Text updateText;
     public TMP_Text fixedUpdateText;
     // EXERCISE 2.4.1: Declare and intialize updateCounter, fixedUpdateCounter, and mr here
-
     // Start is called before the first frame update
     void Start()
     {
