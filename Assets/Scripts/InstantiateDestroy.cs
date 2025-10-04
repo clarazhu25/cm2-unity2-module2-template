@@ -5,18 +5,31 @@ using UnityEngine;
 public class InstantiateDestroy : MonoBehaviour
 {
     // EXERCISE 2.5.1: Create variables below 
+    public GameObject prefab;
+    public GameObject Spacebar;
+    public float DelayDestroy = 0.8f;
 
     // Update is called once per frame
     void Update()
     {
-        // EXERCISE 2.5.2: Finish code below
-        /*
-        if (LEFT MOUSE CLICKED)
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            CREATE CLONE OF PREFAB
-            DESTROY IN DELAYDESTROY SECONDS
+            GameObject clone = Instantiate(prefab);
+            Destroy(clone, DelayDestroy);
         }
-        */
-        //END OF CODE
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject clone = Instantiate(spacebar);
+        }
+        // EXERCISE 2.5.2: Finish code below
+            /*
+            if (LEFT MOUSE CLICKED)
+            {
+                CREATE CLONE OF PREFAB
+                DESTROY IN DELAYDESTROY SECONDS
+            }
+            */
+            //END OF CODE
     }
 }
