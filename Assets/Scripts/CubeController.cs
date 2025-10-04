@@ -6,28 +6,38 @@ using TMPro;
 public class CubeController : MonoBehaviour
 {
     public TMP_Text scoreText;
+    private int currentNum;
+    public int score = 0;
+    public Vector3 position;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        currentNum = 0;
         // EXERCISE 2-3: INITIALIZE CURRENTNUM HERE
     }
 
     // Update is called once per frame
     void Update()
     {
-        // EXERCISE 2-3: INCREMENT AND PRINT CURRENTNUM HERE 
+        // currentNum = currentNum + 1;
+        // Debug.Log(currentNum);
 
-        // EXERCISE 2-3: Uncomment the code below and complete 
-        // the if statement to check if Mouse0 is clicked 
-        /*
-        if (LEFT MOUSE CLICKED)
+
+        if (Input.GetKey(KeyCode.Mouse0))
         {
-            score++;
-            scoreText.text = "Score: " + score.ToString();
+            score = score + 1;
+            scoreText.text = "The Score is: " + score.ToString();
         }
-        */
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            score = score - 1;
+            scoreText.text = "the score is: " + score.ToString();
+        }
 
     }
+
+    
 }

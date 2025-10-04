@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class ExampleFile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int visibleNumber;
+    private int hiddenNumber;
+
+    public void AddNumber()
     {
-        
+        // While the variable and method are hidden, 
+        // it can still be accessed by the public method,
+        // since it is part of the same class.
+        AddToVisible();
+        hiddenNumber++;
     }
 
-    // Update is called once per frame
-    void Update()
+    // Only this script can call this method
+    private void AddToVisible()
     {
-        
+        visibleNumber++;
     }
+    
 }
