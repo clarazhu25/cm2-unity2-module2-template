@@ -20,7 +20,8 @@ public class InstantiateDestroy : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject clone = Instantiate(spacebar);
+            GameObject clone = Instantiate(Spacebar);
+            Destroy(clone, DelayDestroy);
         }
         // EXERCISE 2.5.2: Finish code below
             /*

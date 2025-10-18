@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 7065186276058694330, guid: 8ac8a8c7a98aa48da86e90556adb7507, type: 3}
+  Spacebar: {fileID: 7065186276058694330, guid: 8ac8a8c7a98aa48da86e90556adb7507, type: 3}
   DelayDestroy: 0.5
 --- !u!1 &630336134
 GameObject:

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Marble : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 10;
     public GameObject target;
 
     // Update is called once per frame
@@ -15,8 +15,9 @@ public class Marble : MonoBehaviour
             Vector3 curr_pos = this.transform.position;
             Vector3 target_pos = target.transform.position;
             float move_speed = speed * Time.deltaTime;
-            
+
             // EXERCISE 2.8.1: Write code below.
+            transform.position = Vector3.MoveTowards(curr_pos, target_pos, move_speed);
         }
     }
 }

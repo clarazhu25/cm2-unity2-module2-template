@@ -12,40 +12,52 @@ public class TimeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(isPaused)
+            if (isPaused)
             {
                 ResumeGame();
             }
             else
             {
                 PauseGame();
-                
+
             }
         }
-        if(Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space"))
         {
             // EXERCISE 2.9.2: Start coroutine.
+            StartCoroutine(Loading());
         }
     }
 
     void PauseGame()
     {
         // EXERCISE 2.9.1: Write code below.
+        Time.timeScale = 0f;
+        isPaused = true;
 
         pausedText.enabled = true;
         pausedText.gameObject.SetActive(true);
     }
-    
+
     void ResumeGame()
     {
         // EXERCISE 2.9.1: Write code below.
+        Time.timeScale = 1f;
+        isPaused = false;
 
         pausedText.gameObject.SetActive(false);
         pausedText.enabled = false;
-        
+
     }
 
     // EXERCISE 2.9.2: Write coroutine below.
+    public IEnumerator Loading()
+    {
+        loadingText.text = "this text will go away in 3 seconds";
+        yield return new WaitForSeconds(3f);
+        loadingText.text = "End of Coroutine";
+    }
+
 }

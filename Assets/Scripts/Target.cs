@@ -9,7 +9,11 @@ public class Target : MonoBehaviour
     {
         transform.Rotate(new Vector3(1, 1, 0));
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(this.gameObject);
+    }
 
     // EXERCISE 2.7.1: Create OnTriggerEnter function here
-    
+
 }
